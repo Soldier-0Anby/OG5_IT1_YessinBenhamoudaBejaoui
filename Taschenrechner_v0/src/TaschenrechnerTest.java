@@ -1,4 +1,3 @@
-package git_taschenrechner;
 
 import java.util.Scanner;
 
@@ -19,27 +18,38 @@ public class TaschenrechnerTest {
 		System.out.println("| Options:                 |");
 		System.out.println("|        1. Addieren       |");
 		System.out.println("|        2. Subtrahieren   |");
-		System.out.println("|        3. Dividieren     |");
-		System.out.println("|        4. Exit           |");
+		System.out.println("|        3. Multiplizieren |");
+		System.out.println("|        4. Dividieren     |");
+		System.out.println("|        5. Exit           |");
 		System.out.println("============================");
 		System.out.print(" Select option: ");
 		swValue = myScanner.next().charAt(0);
-
+		myScanner.close();
 		// Switch construct
 		switch (swValue) {
 		case '1':
 			System.out.println("4 + 5 = " + ts.add(4, 5));
 			break;
-			
-			
-		  //  add your code here
-		  
-		  
+
+		case '2':
+			System.out.println("4 - 5 = " + ts.sub(4, 5));
+			break;
+
+		case '3':
+			System.out.println("4 * 5 = " + ts.mul(4, 5));
+			break;
+
+		case '4':
+			System.out.println("4 / 5 = " + ts.div(4, 5));
+			break;
+
+		// add your code here
+
 		default:
 			System.out.println("Invalid selection");
 			break; // This break is not really necessary
+
 		}
 
 	}
-
 }
