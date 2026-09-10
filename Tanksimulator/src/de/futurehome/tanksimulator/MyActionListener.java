@@ -1,4 +1,5 @@
 package de.futurehome.tanksimulator;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -13,13 +14,27 @@ public class MyActionListener implements ActionListener {
 		Object obj = e.getSource();
 		if (obj == f.btnBeenden)
 			System.exit(0);
-		
-		if (obj == f.btnEinfuellen) {
-			 double fuellstand = f.myTank.getFuellstand();
-			 fuellstand = fuellstand + 5;
-			 f.myTank.setFuellstand(fuellstand);
 
-			 f.lblFuellstand.setText(""+fuellstand);
+		if (obj == f.btnEinfuellen) {
+			double fuellstand = f.myTank.getFuellstand();
+			fuellstand = fuellstand + 5;
+			f.myTank.setFuellstand(fuellstand);
+
+			f.lblFuellstand.setText("" + fuellstand);
+		}
+		if (obj == f.btnVerbrauchen) {
+			double fuellstand = f.myTank.getFuellstand();
+			fuellstand = fuellstand - 2;
+			f.myTank.setFuellstand(fuellstand);
+			f.lblFuellstand.setText("" + fuellstand);
+
+		}
+		if (obj == f.btnZuruecksetzen) {
+			double fuellstand = f.myTank.getFuellstand();
+			fuellstand = 0;
+			f.myTank.setFuellstand(fuellstand);
+			f.lblFuellstand.setText("" + fuellstand);
+
 		}
 
 	}
