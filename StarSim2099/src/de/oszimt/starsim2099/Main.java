@@ -18,7 +18,7 @@ public class Main {
 		Raumschiff meinStarCarrier = new Raumschiff();
 		meinStarCarrier.setTyp("Star-Carrier DF100");
 		meinStarCarrier.setAntrieb("Sol 8");
-		meinStarCarrier.setMaxLadekapazitaet(250);
+		meinStarCarrier.setMaxKapazitaet(250);
 		meinStarCarrier.setPosX(universumBreite / 2);
 		meinStarCarrier.setPosY(universumHoehe  / 2);
 		meinStarCarrier.setWinkel(180);
