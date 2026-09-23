@@ -10,7 +10,7 @@ public class Haustier {
 	private String name;
 	
 	
-	public Haustier() {
+	public Haustier(int hunger, int muede, int zufrieden, int gesund, String name) {
 		this.hunger = hunger;
 		this.muede = muede;
 		this.zufrieden = zufrieden;
@@ -25,10 +25,13 @@ public class Haustier {
 	}
 
 
-	public void setHunger() {
+	public void setHunger(int hunger) {
 		this.hunger = hunger;
 		if (hunger < 0) {
-		 System.out.println("game over");	
+		 throw new IllegalArgumentException("der wert darf nicht negativ sein");
+		}
+		if (hunger > 100) {
+			 throw new IllegalArgumentException("der wert darf nicht ueber 100 sein");
 		}
 	}
 
@@ -39,10 +42,14 @@ public class Haustier {
 	}
 
 
-	public void setMuede() {
+	public void setMuede(int muede) {
 		this.muede = muede;
 		if (muede < 0) {
-		System.out.println("game over");
+			muede = 0;
+			 throw new IllegalArgumentException("der wert darf nicht negativ sein");
+		}
+		if (muede > 100) {
+			 throw new IllegalArgumentException("der wert darf nicht ueber 100 sein");
 		}
 	}
 
@@ -52,10 +59,13 @@ public class Haustier {
 	}
 
 
-	public void setZufrieden() {
+	public void setZufrieden(int zufrieden) {
 		this.zufrieden = zufrieden;
 		if (zufrieden < 0) {
-			 System.out.println("game over");
+			 throw new IllegalArgumentException("der wert darf nicht negativ sein");
+		}
+		if (zufrieden > 100) {
+			 throw new IllegalArgumentException("der wert darf nicht ueber 100 sein");
 		}
 	}
 
@@ -65,10 +75,13 @@ public class Haustier {
 	}
 
 
-	public void setGesund() {
+	public void setGesund(int gesund) {
 		this.gesund = gesund;
 		if (gesund < 0) {
-			 System.out.println("game over");
+			 throw new IllegalArgumentException("der wert darf nicht negativ sein");
+		}
+		if (gesund > 100) {
+			 throw new IllegalArgumentException("der wert darf nicht ueber 100 sein");
 		}
 	}
 
