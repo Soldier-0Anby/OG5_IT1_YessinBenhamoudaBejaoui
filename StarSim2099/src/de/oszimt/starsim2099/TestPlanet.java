@@ -8,7 +8,7 @@ public class TestPlanet {
 		int anzahlHafen = 3;
 		String name = "Max Musterpilot";
 		
-		Planet meinPlanet = new Planet();
+		Planet meinPlanet = new Planet(posX, posY, name, anzahlHafen);
 		meinPlanet.setAnzahlHafen(anzahlHafen);
 		meinPlanet.setName(name);
 		meinPlanet.setPosX(posX);

@@ -9,7 +9,7 @@ package de.oszimt.starsim2099;
 public class Ladung {
 
 	public Ladung() {
-		super();
+		
 		this.posX = posX;
 		this.posY = posY;
 		this.masse = masse;
