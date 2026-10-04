@@ -10,7 +10,7 @@ public class Haustier {
 	private String name;
 	
 	
-	public Haustier(int hunger, int muede, int zufrieden, int gesund, String name) {
+	public Haustier(String name) {
 		this.hunger = hunger;
 		this.muede = muede;
 		this.zufrieden = zufrieden;
@@ -28,9 +28,11 @@ public class Haustier {
 	public void setHunger(int hunger) {
 		this.hunger = hunger;
 		if (hunger < 0) {
+			hunger = 0;
 		 throw new IllegalArgumentException("der wert darf nicht negativ sein");
 		}
 		if (hunger > 100) {
+			hunger = 100;
 			 throw new IllegalArgumentException("der wert darf nicht ueber 100 sein");
 		}
 	}
@@ -49,6 +51,7 @@ public class Haustier {
 			 throw new IllegalArgumentException("der wert darf nicht negativ sein");
 		}
 		if (muede > 100) {
+			muede = 100;
 			 throw new IllegalArgumentException("der wert darf nicht ueber 100 sein");
 		}
 	}
@@ -62,9 +65,11 @@ public class Haustier {
 	public void setZufrieden(int zufrieden) {
 		this.zufrieden = zufrieden;
 		if (zufrieden < 0) {
+			zufrieden = 0;
 			 throw new IllegalArgumentException("der wert darf nicht negativ sein");
 		}
 		if (zufrieden > 100) {
+			zufrieden = 100;
 			 throw new IllegalArgumentException("der wert darf nicht ueber 100 sein");
 		}
 	}
@@ -78,9 +83,11 @@ public class Haustier {
 	public void setGesund(int gesund) {
 		this.gesund = gesund;
 		if (gesund < 0) {
+			gesund = 0;
 			 throw new IllegalArgumentException("der wert darf nicht negativ sein");
 		}
 		if (gesund > 100) {
+			gesund = 100;
 			 throw new IllegalArgumentException("der wert darf nicht ueber 100 sein");
 		}
 	}
@@ -93,5 +100,27 @@ public class Haustier {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+
+	public void fuettern() {
+		
+		
 	} 
+	public void schlafen() {
+		
+	}
+
+
+	public void spielen() {
+		
+		
+	}
+
+
+	public void heilen() {
+		
+		
+	}
+	
 }
