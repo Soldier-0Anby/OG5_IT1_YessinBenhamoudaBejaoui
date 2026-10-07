@@ -198,7 +198,7 @@ public class HaustierGUI extends JFrame {
 	
 	public void btnMedizinClick(){
 		pnlHaustier.setGesund(true);
-		tier.heilen();
+		tier.heilen(100);
 	}
 	
 	
